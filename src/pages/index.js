@@ -15,8 +15,8 @@ export default function Home() {
           const response = await fetch("/api/pay", {
             method: "POST",
             headers: {
+              "Authorization": "Bearer NEXT_PUBLIC_SQUARE_ACCESS_TOKEN",
               "Content-type": "application/json",
-              "Authorization": "Bearer SQUARE_ACCESS_TOKEN"
             },
             body: JSON.stringify({
               sourceId: token.token,
